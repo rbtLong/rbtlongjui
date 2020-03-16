@@ -1,0 +1,25 @@
+<?php
+
+    namespace Portfolio\Preview;
+
+    use Portfolio\PortfolioQueries;
+
+    require_once __DIR__.'/../../api/portfolio/_core/portfolio_queries.php';
+    require_once __DIR__.'/preview-item.include';
+
+    class Preview {
+
+        public static function render() {
+
+            $data = PortfolioQueries::get_projects();
+            foreach($data as $d) {
+                $itm = json_decode(json_encode($d));
+                $pi = new PreviewItem($itm);
+                echo $pi->render();
+            }
+
+        }
+
+    }
+
+

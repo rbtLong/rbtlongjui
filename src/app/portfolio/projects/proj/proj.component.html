@@ -1,0 +1,182 @@
+<div *ngIf="status == 'fail'">
+  failed to grab the data you requested
+</div>
+
+<div *ngIf="status == 'error'">
+  unknown error occurred
+</div>
+
+<div *ngIf="status == 'error parse param'">
+  the id you inputted is not invalid id
+</div>
+
+<div *ngIf="status == 'normal'">
+
+  <section class="hg_section pt-80 pb-0">
+    <div class="container">
+      <div class="row">
+        <div class="col-sm-12 col-md-12">
+          <div class="row hg-portfolio-item mb-30">
+            <!-- Left side -->
+            <div id="pinned-trigger" class="col-sm-12 col-md-6 col-lg-6">
+
+              <div id="pinned-element" class="portfolio-item-content affixcontent mb-sm-50">
+
+                <h1 class="page-title portfolio-item-title">
+                  {{ project.data.title }}
+                </h1>
+
+                <div class="portfolio-item-desc">
+                  <div [innerHTML]="project.data.description"></div>
+                </div>
+
+                <ul class="portfolio-item-details clearfix">
+
+                  <li class="portfolio-item-details-client clearfix">
+                    <span class="portfolio-item-details-label">For</span>
+                    <span class="portfolio-item-details-item">{{ project.data.for }}</span>
+                  </li>
+
+                  <li class="portfolio-item-details-year clearfix" *ngIf="project.data.started">
+                    <span class="portfolio-item-details-label">Started</span>
+                    <span class="portfolio-item-details-item">{{ project.data.started }}</span>
+                  </li>
+
+                  <li class="portfolio-item-details-year clearfix" *ngIf="project.data.ended">
+                    <span class="portfolio-item-details-label">End</span>
+                    <span class="portfolio-item-details-item">{{ project.data.ended }}</span>
+                  </li>
+
+                  <li class="portfolio-item-details-services clearfix">
+                    <span class="portfolio-item-details-label">App Type</span>
+                    <span class="portfolio-item-details-item">{{ project.data.app_type }}</span>
+                  </li>
+
+                  <li class="portfolio-item-details-partners clearfix">
+                    <span class="portfolio-item-details-label">Tags</span>
+                    <span class="portfolio-item-details-item">
+                      <span *ngFor="let tag of (project.data.tags || []); let i=index">
+                        <a [routerLink]="['/portfolio/tags/'+ tag | lowercase ]">{{ tag | uppercase}}</a><!--
+                        --><span *ngIf="i < project.data.tags.length-1">, </span><!--
+                    --></span>
+                    </span>
+                  </li>
+
+                  <li class="portfolio-item-details-partners clearfix">
+                    <span class="portfolio-item-details-label">Team</span>
+                    <span class="portfolio-item-details-item">
+                        <a href="javascript:void(0)">Robert Long</a><!--
+                        --><span *ngFor="let mem of (project.data.members || [])"><!--
+                          -->, <a href="{{ mem?.url }}" target="_blank">{{ mem?.name }}</a><!--
+                        --></span>
+                    </span>
+                  </li>
+
+                  <li class="portfolio-item-details-services clearfix" *ngIf="project.data.source">
+                    <span class="portfolio-item-details-label">Source</span>
+                    <span class="portfolio-item-details-item">{{ project.data.source }}</span>
+                  </li>
+
+                </ul>
+
+                <!-- Other details sharing -->
+                <div class="portfolio-item-otherdetails clearfix">
+                  <div class="portfolio-item-share clearfix" data-share-title="SHARE:">
+                    <!-- Twitter share -->
+                    <a href="https://twitter.com/intent/tweet?text=Check+out+-+Creative+front+end+template+Kallyas - &amp;url=https%3A%2F%2Fkallyas-template.net" title="SHARE ON TWITTER" class=" portfolio-item-share-twitter">
+                      <span class="fab fa-twitter"></span>
+                    </a>
+
+                    <!-- Facebook share -->
+                    <a href="https://www.facebook.com/sharer/sharer.php?u=https%3A%2F%2Fkallyas-template.net%2F&amp;src=sdkpreparse" title="SHARE ON FACEBOOK" class=" portfolio-item-share-facebook">
+                      <span class="fab fa-facebook-f"></span>
+                    </a>
+
+                    <!-- Google plus share -->
+                    <a href="https://plus.google.com/share?url=https%3A%2F%2Fkallyas-template.net" title="SHARE ON GPLUS" class=" portfolio-item-share-gplus">
+                      <span class="fab fa-google-plus-g"></span>
+                    </a>
+
+                    <!-- Pinterest share -->
+                    <a href="http://pinterest.com/pin/create/button?description=Check+out+-+Creative+front+end+template+Kallyas - &amp;url=https%3A%2F%2Fkallyas-template.net" title="SHARE ON PINTEREST" class=" portfolio-item-share-pinterest">
+                      <span class="fab fa-pinterest"></span>
+                    </a>
+
+                    <!-- Mail to: -->
+                    <a href="mailto:?body=You can see it live here https%3A%2F%2Fkallyas-template.net Made by Hogash Studio https://hogash.com&amp;subject=Check out this awesome project: Kallyas Template" title="SHARE ON MAIL" class=" portfolio-item-share-mail">
+                      <span class="far fa-envelope"></span>
+                    </a>
+                  </div>
+                  <!-- social links -->
+
+                  <!-- Portfolio link buttons -->
+                  <div class="portfolio-item-livelink">
+<!--                    <a href="#" target="_self" class="btn btn-lined lined-custom" title="">
+												<span class="visible-sm visible-xs visible-lg">
+													PROJECT LIVE PREVIEW
+												</span>
+
+                      <span class="visible-md">PREVIEW</span>
+                    </a>-->
+                  </div>
+                  <!--/ Portfolio link buttons -->
+                </div>
+              </div>
+            </div>
+
+
+            <!-- Right side -->
+            <div class="col-sm-12 col-md-6 col-lg-6">
+              <!-- Portfolio item right -->
+              <div class="portfolio-item-right mfp-gallery images">
+
+                <div class="hg_other_images portfolio-item-extraimages">
+
+                  <!-- Image -->
+                  <div class="portfolio-item-extraimg">
+                    <!-- Main portfolio image & pop-up -->
+                    <a href="/assets/images/ptf6.png" target="_blank" class="hoverBorder">
+                      <span class="hoverBorderWrapper">
+													<img src="/assets/images/ptf6-700x525.png" class="img-fluid" alt="" title="" />
+
+													<span class="theHoverBorder"></span>
+												</span>
+                    </a>
+                  </div>
+
+                  <div class="portfolio-item-extraimg">
+                    <!-- Main portfolio image & pop-up -->
+                    <a href="/assets/images/ptf6.png" target="_blank" class="hoverBorder">
+                      <span class="hoverBorderWrapper">
+													<img src="/assets/images/ptf6-700x525.png" class="img-fluid" alt="" title="" />
+
+													<span class="theHoverBorder"></span>
+												</span>
+                    </a>
+                  </div>
+
+                  <div class="portfolio-item-extraimg">
+                    <!-- Main portfolio image & pop-up -->
+                    <a href="/assets/images/ptf6.png" target="_blank" class="hoverBorder">
+                      <span class="hoverBorderWrapper">
+													<img src="/assets/images/ptf6-700x525.png" class="img-fluid" alt="" title="" />
+
+													<span class="theHoverBorder"></span>
+												</span>
+                    </a>
+                  </div>
+
+                </div>
+
+              </div>
+            </div>
+          </div>
+
+          <!-- Separator element -->
+<!--      <div class="hg_separator"></div>-->
+        </div>
+      </div>
+    </div>
+  </section>
+
+</div>

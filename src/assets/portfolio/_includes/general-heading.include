@@ -1,0 +1,92 @@
+<?php
+
+$page_name = 'Portfolio - rbtLong';
+$page_title = 'Portfolio - rbtLong';
+$page_type = 'portfolio website';
+$page_site_name = 'rbtlong.com/portfolio';
+$page_description = 'A portfolio showcasing Robert Long\'s projects and skills.';
+$page_image_content = '';
+$page_author = 'Robert Long';
+$page_created = '02-09-2020';
+
+/*
+Social media tags and more >>>>> http://moz.com/blog/meta-data-templates-123 <<<<<
+Debugging tools:
+    - https://dev.twitter.com/docs/cards/validation/validator
+    - https://developers.facebook.com/tools/debug
+    - http://www.google.com/webmasters/tools/richsnippets
+    - http://developers.pinterest.com/rich_pins/validator/
+
+
+<!-- Google Authorship and Publisher Markup. You can also simply add your name.
+Author = Owner, Publisher = who built the website. Add profile url in href="". -->
+Profile url example: https://plus.google.com/1130658794498306186 or replace [Google+_Profile] below with your profile #
+<link rel="author" href="https://plus.google.com/[Google+_Profile]/posts"/>
+<link rel="publisher" href="https://plus.google.com/[Google+_Page_Profile]"/>
+
+
+*/
+?>
+
+<link rel="canonical" href="https://rbtlong.com/portfolio" />
+<meta property="og:url" content="<?= $page_site_name ?>"/>
+
+<meta itemprop="name" content="<?= $page_name ?>">
+<meta itemprop="description" content="<?= $page_description ?>">
+<meta itemprop="image" content="<?= $page_image_content ?>">
+
+<meta property="og:locale" content="en"/>
+<meta property="og:type" content="<?= $page_type ?>"/>
+<meta property="og:title" content="<?= $page_title ?>"/>
+<meta property="og:description" content="<?= $page_description ?>"/>
+<meta property="og:site_name" content="<?= $page_site_name ?>"/>
+
+<meta property="og:image" content="<?= $page_image_content ?>"/>
+
+<meta name="twitter:card" content="<?= $page_description ?>">
+<meta name="twitter:image" content="<?= $page_image_content ?>">
+<meta name="twitter:domain" content="<?= 'rbtlong.com' ?>">
+<meta name="twitter:site" content="<?= $page_site_name ?>">
+<meta name="twitter:creator" content="<?= $page_author ?>">
+<meta name="twitter:url" content="<?= $page_site_name ?>">
+<meta name="twitter:title" content="<?= $page_title ?>">
+<meta name="twitter:description" content="<?= $page_description ?>">
+
+<meta name="geo.placename" content="Orange, CA, USA" />
+<meta name="geo.position" content="33.8076143;-87.6297980" />
+<meta name="geo.region" content="US-Orange" />
+<meta name="ICBM" content="33.8076143, -117.831332" />
+
+<link rel="schema.DC" href="http://purl.org/DC/elements/1.0/" />
+<meta name="DC.Title" content="<?= $page_title ?>" />
+<meta name="DC.Creator" content="<?= $page_author ?>" />
+<meta name="DC.Type" content="<?= $page_type ?>" />
+<meta name="DC.Date" content="<?= $page_created ?>" />
+<meta name="DC.Format" content="text/html" />
+<meta name="DC.Language" content="en" />
+
+<!-- Retina Images -->
+<script>(function(w){var dpr=((w.devicePixelRatio===undefined)?1:w.devicePixelRatio);if(!!w.navigator.standalone){var r=new XMLHttpRequest();r.open('GET','/retinaimages.php?devicePixelRatio='+dpr,false);r.send()}else{document.cookie='devicePixelRatio='+dpr+'; path=/'}})(window)</script>
+<noscript><style id="devicePixelRatio" media="only screen and (-moz-min-device-pixel-ratio: 2), only screen and (-o-min-device-pixel-ratio: 2/1), only screen and (-webkit-min-device-pixel-ratio: 2), only screen and (min-device-pixel-ratio: 2)">html{background-image:url("php-helpers/_retinaimages.php?devicePixelRatio=2")}</style></noscript>
+
+
+<link rel="apple-touch-icon-precomposed" type="image/x-icon" href="/images_custom/favicons-apple-touch-icon-72x72-precomposed.png" sizes="72x72" />
+<link rel="apple-touch-icon-precomposed" type="image/x-icon" href="/images_custom/favicons-apple-touch-icon-114x114-precomposed.png" sizes="114x114" />
+<link rel="apple-touch-icon-precomposed" type="image/x-icon" href="/images_custom/favicon.png" />
+<link rel="icon" type="image/png" href="/images_custom/favicon-32x32.png" sizes="32x32">
+
+<!-- Google Fonts CSS Stylesheet // More here http://www.google.com/fonts#UsePlace:use/Collection:Open+Sans -->
+<link href="http://fonts.googleapis.com/css?family=Open+Sans:300,400italic,400,600,600italic,700,800,800italic" rel="stylesheet" type="text/css">
+<link href='http://fonts.googleapis.com/css?family=Montserrat:400,700' rel='stylesheet' type='text/css'>
+
+<!-- ***** Main + Responsive & Base sizing CSS Stylesheet ***** -->
+<link rel="stylesheet" href="/css/template.css" type="text/css" media="all">
+<link rel="stylesheet" href="/css/responsive.css" type="text/css" media="all">
+<link rel="stylesheet" href="/css/base-sizing.css" type="text/css" media="all">
+
+<link rel="stylesheet" href="/css/custom.css" type="text/css" />
+<script type="text/javascript" src="/js/modernizr.min.js"></script>
+<script type="text/javascript" src="/js/jquery.js"></script>
+
+<link rel="stylesheet" href="/css/bootstrap.css" type="text/css" media="all">
+<link rel="stylesheet" href="/fonts/font-awesome/css/font-awesome.min.css" type="text/css" media="all">

@@ -1,0 +1,197 @@
+<?php
+
+    namespace Portfolio\Preview;
+
+    /*
+    $id = -1;
+    $created = null;
+    $title = '';
+    $app_type = '';
+    $tags = [];
+    $brief_description = '';
+    $description = '';
+    $images = [];
+    $images_small = [];
+    */
+
+    class PreviewItem {
+
+        private $itm = null;
+
+        public function __construct($itm) {
+            $this->itm = $itm;
+        }
+
+        public function render() {
+            $output = <<<output
+<div class="col-sm-12 col-md-6 col-lg-4">
+    <!-- Portfolio carousel content -->
+    <div class="hg-portfolio-carousel">
+        <!-- Portfolio carousel item -->
+        <div class="portfolio-item">
+            <!-- Portfolio Carousel element -->
+            <div class="ptcarousel ptcarousel--frames-modern">
+                <div class="hg_general__carousel-wrapper">
+                    <!-- Carousel -->
+                    <div class="hg_general__carousel cfs--default js-slick"
+                         data-slick='{
+                        "infinite":true,
+                        "slidesToShow":1,
+                        "slidesToScroll":1,
+                        "autoplay":false,
+                        "autoplaySpeed":9000,
+                        "easing":"easeOutExpo",
+                        "fade":true,
+                        "arrows":true,
+                        "dots":false
+                     }'>
+                        <!-- Slide 1 -->
+                        <div class="item kl-has-overlay cfs--item">
+                            <!-- Intro image -->
+                            <div class="img-intro">
+                                <a href="images/frame.jpg" data-type="image" data-lightbox="image"></a>
+
+                                <!-- Image -->
+                                <img src="images/frame-570x428.jpg" class="img-responsive" alt="" title=""/>
+                                <!--/ Image -->
+
+                                <!-- Overlay -->
+                                <div class="overlay">
+                                    <div class="overlay-inner">
+                                        <span class="far fa-image"></span>
+                                    </div>
+                                </div>
+                                <!--/ Overlay -->
+                            </div>
+                            <!--/ Intro image -->
+                        </div>
+                        <!--/ Slide 1 -->
+
+                        <!-- Slide 2 -->
+                        <div class="item kl-has-overlay cfs--item">
+                            <!-- Intro image -->
+                            <div class="img-intro">
+                                <!-- Pop-up image -->
+                                <a href="images/graph3.png" data-type="image" data-lightbox="image"></a>
+                                <!--/ Pop-up image -->
+
+                                <!-- Image -->
+                                <img src="images/graph3-570x428.png" class="img-responsive" alt="" title=""/>
+                                <!--/ Image -->
+
+                                <!-- Overlay -->
+                                <div class="overlay">
+                                    <div class="overlay-inner">
+                                        <span class="far fa-image"></span>
+                                    </div>
+                                </div>
+                                <!--/ Overlay -->
+                            </div>
+                            <!--/ Intro image -->
+                        </div>
+                        <!--/ Slide 2 -->
+
+                        <!-- Slide 3 -->
+                        <div class="item kl-has-overlay cfs--item">
+                            <!-- Intro image -->
+                            <div class="img-intro">
+                                <!-- Pop-up image -->
+                                <a href="images/kkjj.png" data-type="image" data-lightbox="image"></a>
+                                <!--/ Pop-up image -->
+
+                                <!-- Image -->
+                                <img src="images/kkjj-570x428.png" class="img-responsive" alt="" title=""/>
+                                <!--/ Image -->
+
+                                <!-- Overlay -->
+                                <div class="overlay">
+                                    <div class="overlay-inner">
+                                        <span class="far fa-image"></span>
+                                    </div>
+                                </div>
+                                <!--/ Overlay -->
+                            </div>
+                            <!--/ Intro image -->
+                        </div>
+                        <!--/ Slide 3 -->
+                    </div>
+                    <!--/ .hg_general__carousel -->
+                </div>
+                <!--/ .hg_general__carousel-wrapper -->
+            </div>
+            <!-- end ptcarousel -->
+
+            <div class="ptcontent">
+                <!-- Title -->
+                <h3 class="title pt-content-title small">
+                    <a href="/portfolio/projects?q=tvsc" target="_blank">
+                        <span class="name"> $this->itm['title'] </span>
+                    </a>
+                </h3>
+                <!--/ Title -->
+
+                <!-- Item description -->
+                <div class="pt-cat-desc">
+                    <p>
+                        $this->itm['brief_description']
+                    </p>
+                </div>
+                <!--/ Item description -->
+
+                <!-- Item details -->
+                <ul class="portfolio-item-details clearfix">
+                    <li class="portfolio-item-details-client clearfix">
+                        <span class="portfolio-item-details-label">For </span>
+                        <span class="portfolio-item-details-item">$this->itm['for']</span>
+                    </li>
+                    <li class="portfolio-item-details-year clearfix">
+                        <span class="portfolio-item-details-label">When </span>
+                        <span class="portfolio-item-details-item">$this->itm['created']</span>
+                    </li>
+                    <li class="portfolio-item-details-cat clearfix">
+                        <span class="portfolio-item-details-label">App Type </span>
+                        <span class="portfolio-item-details-item">$this->itm['app_type']</span>
+                    </li>
+                    <li class="portfolio-item-details-services clearfix">
+                        <span class="portfolio-item-details-label">Tags</span>
+                        <span class="portfolio-item-details-item">
+                                <a href="/portfolio/tags?q=csharp" target="_blank">C#</a>,
+                                <a href="/portfolio/tags?q=wpf" target="_blank">WPF</a>,
+                                <a href="/portfolio/tags?q=xaml" target="_blank">XAML</a>,
+                                <a href="/portfolio/tags?q=mvvm" target="_blank">MVVM</a>
+                        </span>
+                    </li>
+                    <li class="portfolio-item-details-partners clearfix">
+                        <span class="portfolio-item-details-label">Team</span>
+                        <span class="portfolio-item-details-item">
+                            <a href="javascript:void(0)">Robert Long</a>,
+                            <a href="https://www.linkedin.com/in/richardvong" target="_blank">Richard Vong</a>,
+                            <a href="https://www.linkedin.com/in/faustosihite" target="_blank">Fausto Sihite</a>
+                        </span>
+                    </li>
+                </ul>
+                <!--/ Item details -->
+
+                <!-- Link Buttons -->
+                <div class="pt-itemlinks itemLinks">
+                    <a class="btn btn-fullcolor" target="_self" href="portfolio-item.html" title="">
+                        SEE MORE
+                    </a>
+
+                    <a href="portfolio-item.html" target="_self" class="btn btn-lined lined-dark" title="">
+                        LIVE PREVIEW
+                    </a>
+                </div>
+                <!--/ Link Buttons -->
+            </div>
+            <!-- end item content -->
+        </div>
+        <!--/ Portfolio carousel item -->
+    </div>
+    <!--/ Portfolio carousel content -->
+</div>
+output;
+            return $output;
+        }
+    }
+

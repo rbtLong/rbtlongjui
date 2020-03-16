@@ -1,0 +1,170 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <title>rbtLong.com</title>
+  <base href="/">
+
+  <link href="https://fonts.googleapis.com/css?family=Roboto:300,400,500&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+
+  <!-- Retina Images -->
+  <script>(function(w){var dpr=((w.devicePixelRatio===undefined)?1:w.devicePixelRatio);if(!!w.navigator.standalone){var r=new XMLHttpRequest();r.open('GET','/retinaimages.php?devicePixelRatio='+dpr,false);r.send()}else{document.cookie='devicePixelRatio='+dpr+'; path=/'}})(window)</script>
+  <noscript><style id="devicePixelRatio" media="only screen and (-moz-min-device-pixel-ratio: 2), only screen and (-o-min-device-pixel-ratio: 2/1), only screen and (-webkit-min-device-pixel-ratio: 2), only screen and (min-device-pixel-ratio: 2)">html{background-image:url("php-helpers/_retinaimages.php?devicePixelRatio=2")}</style></noscript>
+
+  <link rel="apple-touch-icon-precomposed" type="image/x-icon" href="/assets/images_custom/favicons-apple-touch-icon-72x72-precomposed.png" sizes="72x72" />
+  <link rel="apple-touch-icon-precomposed" type="image/x-icon" href="/assets/images_custom/favicons-apple-touch-icon-114x114-precomposed.png" sizes="114x114" />
+  <link rel="apple-touch-icon-precomposed" type="image/x-icon" href="/assets/images_custom/favicon.png" />
+  <link rel="icon" type="image/png" href="/assets/images_custom/favicon-32x32.png" sizes="32x32">
+
+  <!-- Google Fonts CSS Stylesheet // More here http://www.google.com/fonts#UsePlace:use/Collection:Open+Sans -->
+  <link href="http://fonts.googleapis.com/css?family=Open+Sans:300,400italic,400,600,600italic,700,800,800italic" rel="stylesheet" type="text/css">
+  <link href='http://fonts.googleapis.com/css?family=Montserrat:400,700' rel='stylesheet' type='text/css'>
+
+  <!-- ***** Main + Responsive & Base sizing CSS Stylesheet ***** -->
+  <link rel="stylesheet" href="/assets/css/template.css" type="text/css" media="all">
+  <link rel="stylesheet" href="/assets/css/responsive.css" type="text/css" media="all">
+  <link rel="stylesheet" href="/assets/css/base-sizing.css" type="text/css" media="all">
+
+  <link rel="stylesheet" href="/assets/css/custom.css" type="text/css" />
+  <script type="text/javascript" src="/assets/js/modernizr.min.js"></script>
+  <script type="text/javascript" src="/assets/js/jquery.js"></script>
+
+  <link rel="stylesheet" href="/assets/css/bootstrap.css" type="text/css" media="all">
+  <link rel="stylesheet" href="/assets/fonts/font-awesome/css/font-awesome.min.css" type="text/css" media="all">
+
+  <!-- meta -->
+  <meta http-equiv="content-type" content="text/html; charset=utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+  <!-- Uncomment the meta tags you are going to use! Be relevant and don't spam! -->
+  <meta name="keywords" content="rbtlong.com, robert long, rbtlong, rbtlong@live.com, u-spark, intully" />
+  <meta name="description" content="This is where I share my favorite experiences: Health, Calisthenics, Coding, Jiu-Jitsu, and Raw Vegetables.">
+
+  <!-- Required REVOLUTION STYLE SHEETS -->
+  <link rel="stylesheet" type="text/css" href="/assets/css/sliders/revolution-slider/settings.css">
+  <link rel="stylesheet" type="text/css" href="/assets/css/sliders/revolution-slider/layers.css">
+  <link rel="stylesheet" type="text/css" href="/assets/css/sliders/revolution-slider/navigation.css">
+
+  <script type="text/javascript" src="/assets/js/plugins/_sliders/revolution-slider/addons/revolution.addon.slicey.min.js"></script>
+
+</head>
+<body class="preloader">
+
+  <app-root></app-root>
+
+  <script type="text/javascript" src="/assets/js/bootstrap.min.js"></script>
+  <script type="text/javascript" src="/assets/js/kl-plugins.js"></script>
+
+  <script type="text/javascript" src="/assets/js/plugins/_sliders/slick/slick.js"></script>
+  <script type="text/javascript" src="/assets/js/trigger/kl-slick-slider.js"></script>
+
+  <script type="text/javascript" src="/assets/js/kl-scripts.js"></script>
+  <script type="text/javascript" src="/assets/js/kl-custom.js"></script>
+
+  <!-- JS FILES // Loaded on this page -->
+  <!-- Required js scripts files for Revolution Slider element -->
+  <script type="text/javascript" src="/assets/js/plugins/_sliders/revolution-slider/jquery.themepunch.tools.min.js"></script>
+  <script type="text/javascript" src="/assets/js/plugins/_sliders/revolution-slider/jquery.themepunch.revolution.min.js"></script>
+
+  <!-- Required js trigger for Revolution Slider element -->
+  <script type="text/javascript">
+    function setREVStartSize(e) {
+      try {
+        var i = jQuery(window).width(),
+          t = 9999,
+          r = 0,
+          n = 0,
+          l = 0,
+          f = 0,
+          s = 0,
+          h = 0;
+        if (e.responsiveLevels && (jQuery.each(e.responsiveLevels, function(e, f) {
+          f > i && (t = r = f, l = e), i > f && f > r && (r = f, n = e)
+        }), t > r && (l = n)), f = e.gridheight[l] || e.gridheight[0] || e.gridheight, s = e.gridwidth[l] || e.gridwidth[0] || e.gridwidth, h = i / s, h = h > 1 ? 1 : h, f = Math.round(h * f), "fullscreen" == e.sliderLayout) {
+          var u = (e.c.width(), jQuery(window).height());
+          if (void 0 != e.fullScreenOffsetContainer) {
+            var c = e.fullScreenOffsetContainer.split(",");
+            if (c) jQuery.each(c, function(e, i) {
+              u = jQuery(i).length > 0 ? u - jQuery(i).outerHeight(!0) : u
+            }), e.fullScreenOffset.split("%").length > 1 && void 0 != e.fullScreenOffset && e.fullScreenOffset.length > 0 ? u -= jQuery(window).height() * parseInt(e.fullScreenOffset, 0) / 100 : void 0 != e.fullScreenOffset && e.fullScreenOffset.length > 0 && (u -= parseInt(e.fullScreenOffset, 0))
+          }
+          f = u
+        } else void 0 != e.minHeight && f < e.minHeight && (f = e.minHeight);
+        e.c.closest(".rev_slider_wrapper").css({
+          height: f
+        })
+      } catch (d) {
+        console.log("Failure at Presize of Slider:" + d)
+      }
+    };
+  </script>
+  <script type="text/javascript">
+    var revapi26,
+      tpj = jQuery;
+    tpj(document).ready(function() {
+      if (tpj("#rev_slider_26_1").revolution == undefined) {
+        revslider_showDoubleJqueryError("#rev_slider_26_1");
+      } else {
+        revapi26 = tpj("#rev_slider_26_1").show().revolution({
+          sliderType: "standard",
+          // jsFileLocation: "//kallyas-template.net/visual_slider_builder/revslider/public/assets/js/",
+          sliderLayout: "fullscreen",
+          dottedOverlay: "none",
+          delay: 9000,
+          navigation: {
+            keyboardNavigation: "off",
+            keyboard_direction: "horizontal",
+            mouseScrollNavigation: "off",
+            mouseScrollReverse: "default",
+            onHoverStop: "off",
+            bullets: {
+              enable: true,
+              hide_onmobile: false,
+              style: "bullet-bar",
+              hide_onleave: false,
+              direction: "horizontal",
+              h_align: "center",
+              v_align: "bottom",
+              h_offset: 0,
+              v_offset: 50,
+              space: 5,
+              tmp: ''
+            }
+          },
+          responsiveLevels: [1240, 1024, 778, 480],
+          visibilityLevels: [1240, 1024, 778, 480],
+          gridwidth: [1240, 1024, 778, 480],
+          gridheight: [868, 768, 960, 720],
+          lazyType: "none",
+          shadow: 0,
+          spinner: "off",
+          stopLoop: "off",
+          stopAfterLoops: -1,
+          stopAtSlide: -1,
+          shuffle: "off",
+          autoHeight: "off",
+          fullScreenAutoWidth: "off",
+          fullScreenAlignForce: "off",
+          hideThumbsOnMobile: "off",
+          hideSliderAtLimit: 0,
+          hideCaptionAtLimit: 0,
+          hideAllCaptionAtLilmit: 0,
+          debugMode: false,
+          fallbacks: {
+            simplifyAll: "off",
+            nextSlideOnWindowFocus: "off",
+            disableFocusListener: false,
+          }
+        });
+        revapi26.bind("revolution.slide.onloaded", function(e) {
+          revapi26.addClass("tiny_bullet_slider");
+        });
+      }
+
+      if (revapi26) revapi26.revSliderSlicey();
+    }); /*ready*/
+  </script>
+
+</body>
+</html>

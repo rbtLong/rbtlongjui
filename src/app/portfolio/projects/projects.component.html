@@ -1,0 +1,118 @@
+<div class="row">
+
+  <div class="col-sm-12 col-md-6 col-lg-4" *ngFor="let proj of projects.data">
+    <div class="hg-portfolio-carousel">
+
+      <div class="portfolio-item">
+
+        <div class="ptcarousel ptcarousel--frames-modern">
+          <div class="hg_general__carousel-wrapper">
+            <div class="hg_general__carousel cfs--default js-slick"
+                 data-slick='{
+                        "infinite":true,
+                        "slidesToShow":1,
+                        "slidesToScroll":1,
+                        "autoplay":false,
+                        "autoplaySpeed":9000,
+                        "easing":"easeOutExpo",
+                        "fade":true,
+                        "arrows":true,
+                        "dots":false
+                     }'>
+
+              <div class="item kl-has-overlay cfs--item">
+                <div class="img-intro">
+                  <a href="/assests/images/frame.jpg" data-type="image" data-lightbox="image"></a>
+
+                  <img src="/assets/images/frame-570x428.jpg" class="img-responsive" alt="" title=""/>
+
+                  <div class="overlay">
+                    <div class="overlay-inner">
+                      <span class="far fa-image"></span>
+                    </div>
+                  </div>
+
+                </div>
+              </div>
+
+            </div>
+          </div>
+        </div>
+
+        <div class="ptcontent">
+          <h3 class="title pt-content-title small">
+            <a [routerLink]="['/portfolio/proj/' + proj.id]">
+              <span class="name"> {{ proj.title }} </span>
+            </a>
+          </h3>
+
+          <!-- Item description -->
+          <div class="pt-cat-desc">
+            <p>
+              {{ proj.brief_description }}
+            </p>
+          </div>
+          <!--/ Item description -->
+
+          <!-- Item details -->
+          <ul class="portfolio-item-details clearfix">
+            <li class="portfolio-item-details-client clearfix">
+              <span class="portfolio-item-details-label">For </span>
+              <span class="portfolio-item-details-item">{{ proj.for }}</span>
+            </li>
+            <li class="portfolio-item-details-year clearfix" *ngIf="proj.started">
+              <span class="portfolio-item-details-label">When </span>
+              <span class="portfolio-item-details-item">{{ proj.started }}</span>
+            </li>
+            <li class="portfolio-item-details-year clearfix" *ngIf="proj.ended">
+              <span class="portfolio-item-details-label">When </span>
+              <span class="portfolio-item-details-item">{{ proj.ended }}</span>
+            </li>
+            <li class="portfolio-item-details-cat clearfix">
+              <span class="portfolio-item-details-label">App Type</span>
+              <span class="portfolio-item-details-item">{{ proj.app_type }}</span>
+            </li>
+            <li class="portfolio-item-details-services clearfix">
+              <span class="portfolio-item-details-label">Tags</span>
+              <span class="portfolio-item-details-item" style="overflow-wrap: break-word;">
+                <span *ngFor="let tag of (proj.tags || []); let i=index">
+                  <a href="/portfolio/tags?q={{ tag | lowercase }}" target="_blank">{{ tag | uppercase}}</a><!--
+                  --><span *ngIf="i < proj.tags.length-1">, </span><!--
+              --></span>
+              </span>
+            </li>
+            <li class="portfolio-item-details-partners clearfix">
+              <span class="portfolio-item-details-label">Team</span>
+              <span class="portfolio-item-details-item">
+                  <a href="javascript:void(0)">Robert Long</a><!--
+                  --><span *ngFor="let mem of (proj.members || [])"><!--
+                    -->, <a href="{{ mem?.url }}" target="_blank">{{ mem?.name }}</a><!--
+                  --></span>
+              </span>
+            </li>
+            <li class="portfolio-item-details-services clearfix" *ngIf="proj.source">
+              <span class="portfolio-item-details-label">Source</span>
+              <span class="portfolio-item-details-item">{{ proj.source }}</span>
+            </li>
+          </ul>
+          <!--/ Item details -->
+
+          <!-- Link Buttons -->
+          <div class="pt-itemlinks itemLinks">
+<!--            <a class="btn btn-fullcolor" target="_self" href="portfolio-item.html" title="">
+              SEE MORE
+            </a>
+
+            <a href="portfolio-item.html" target="_self" class="btn btn-lined lined-dark" title="">
+              LIVE PREVIEW
+            </a>-->
+          </div>
+          <!--/ Link Buttons -->
+        </div>
+        <!-- end item content -->
+      </div>
+      <!--/ Portfolio carousel item -->
+    </div>
+  </div>
+
+</div>
